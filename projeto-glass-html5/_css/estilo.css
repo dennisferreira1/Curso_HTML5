@@ -118,6 +118,41 @@ section#corpo {
     border-right: 1px solid #606060;
     padding-right: 20px;
 }
+
+/* Formatação da tabela*/
+
+table#tabelaespec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+}
+table#tabelaespec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tabelaespec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+table#tabelaespec td{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+table#tabelaespec td.ce {
+    background-color: #606060;
+    color: #ffffff;
+    vertical-align: top;
+}
+table#tabelaespec td.cd {
+    background-color: #cecece;
+}
+
+
 aside#lateral {
     display: block;
     width: 300px;
