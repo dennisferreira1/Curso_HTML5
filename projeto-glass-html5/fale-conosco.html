@@ -30,38 +30,100 @@
 				</nav>
             </header>
 
-            Fale Conosco > Contato
-            Formulário de Contato
-            por Gustavo Guanabara
-            Atualizado em 01/Maio/2013
+            <section id="corpo-full">
+				<article id="noticia-principal">
+					<header id="cabecalho-noticia-principal">
+						<hgroup>
+						<h3>Fale Conosco > Contato</h3>
+						<h1>Formulário de Contato</h1>
+						<h2>por Gustavo Guanabara</h2>
+						<h3 class="direita">Atualizado em 01/Maio/2013</h3>
+						</hgroup>
+					</header>
 
-            Identificação do Usuário
-                Nome:
-                Senha:
-                E-mail:
-                Sexo:
-                    - Masculino
-                    - Feminino
-                Data de Nascimento:
+                    <form method="POST" id="fContato" action="mailto:dennisferreira1@hotmail.com">
+                        <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                            <p><label for="iNome">Nome:</label><input type="text" name="nNome" id="iNome" size="30" maxlength="35" placeholder="Nome"></p>
+                            <p><label for="iSenha">Senha:</label><input type="password" name="nSenha" id="iSenha" size="8" maxlength="8" placeholder="Senha"></p>
+                            <p><label for="iEmail">E-mail:</label><input type="email" name="nEmail" id="iEmail" size="30" maxlength="35" placeholder="Email"></p>
+                            <fieldset id="sexo"><legend>Sexo</legend>
+                                <input type="radio" name="nSexo" id="iMasc"><label for="iMasc">Masculino</label><br>
+                                <input type="radio" name="nSexo" id="iFem"><label for="iFem">Feminino</label>
+                            </fieldset>
+                            <p><label for="iDataNasc">Data de Nascimento:</label><input type="date" name="nDataNasc" id="iDataNasc"></p>
+                        </fieldset>
+                        
+                        <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                            <p><label for="iLogradouro">Logradouro:</label><input type="text" name="nLogradouro" id="iLogradouro" size="30" maxlength="35" placeholder="Rua, Travessa, Avenida ..."></ p>
+                            <p><label for="iNumero">Número:</label><input type="number" name="nNumero" id="iNumero" min="0" max="99999"></p>
+                            <p><label for="iEstado">Estado:</label>
+                            <select name="nEstado" id="iEstado">
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="RN" selected>Rio Grande do Norte</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="PE">Pernambuco</option>
+                                </optgroup>
 
-            Endereço do Usuário
-                Logradouro:
-                Número:
-                Estado:
-                Cidade:
+                            </select></p>
+                            <p><label for="iCidade">Cidade:</label><input type="text" name="nCidade" id="iCidade" size="15" maxlength="20" placeholder="Sua cidade" list="listCidades"></p>
+                            <datalist id="listCidades">
+                                <option value="Natal"></option>
+                                <option value="Ceará-Mirim"></option>
+                                <option value="Parnamirim"></option>
+                                <option value="Macaíba"></option>
+                                <option value="São Gonçalo"></option>
+                            </datalist>
+                            
+                        </fieldset>
 
-            Mensagem do Usuário
-                Grau de Urgência:
-                Mensagem:
+                        <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                            <p><label for="iGrauUrgencia">Grau de Urgência:</label>
+                                Mín
+                                <input type="range" name="nGrauUrgencia" id="iGrauUrgencia" min="0" max="10" step="2">
+                                Máx
+                            </p>
 
-            Quero um Google Glass
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+                            <p> 
+                                <label for="iMensagem">Mensagem:</label>
+                                <textarea name="nTextArea" id="iTextArea" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                            </p>  
 
+                        </fieldset>
 
-            [BOTÃO ENVIAR]
+                        <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                            <p>
+                                <input type="checkbox" name="nPedido" id="iPedido" checked>
+                                <label for="iPedido">Gostaria de adquirir um Google Glass quando disponível</label>
+                            </p>
+                            <p>
+                                <label for="iCor">Cor:</label>
+                                <input type="color" name="nCor" id="iCor" value="#0000FF">
+                            </p>
+                            <p>
+                                <label for="iQuantidade">Quantidade:</label>
+                                <input type="number" name="nQuantidade" id="iQuantidade" min="0" max="5" value="0">
+                            </p>
+                            <p>
+                                <label for="iPreco">Preço Total: R$</label>
+                                <input type="text" size="10" name="nPreco" id="iPreco" placeholder="Total a pagar" readonly>
+                            </p>
+                        </fieldset>
+
+                        <input type="image" name="nEnviar" src="_imagens/botao-enviar.png">
+                    </form>
+
+                </article>
+            </section>
 
             <footer id="rodape">
                 <p>Copyright 2013 - by Gustavo Guanabara <br>
