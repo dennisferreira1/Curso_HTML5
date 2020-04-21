@@ -3,7 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="_css/estilo.css">
-		<script src="_javascript/funcoes.js"></script>
+        <script src="_javascript/funcoes.js"></script>
+        <script>
+            function calc_total(){
+                var qtde = parseInt(document.getElementById('iQuantidade').value);
+                total = qtde * 1500;
+                document.getElementById('iPreco').value = total;
+            }
+        </script>
 		<title>Tudo sobre Google Glass</title>
 	</head>
 	<body>
@@ -111,7 +118,7 @@
                             </p>
                             <p>
                                 <label for="iQuantidade">Quantidade:</label>
-                                <input type="number" name="nQuantidade" id="iQuantidade" min="0" max="5" value="0">
+                                <input type="number" name="nQuantidade" id="iQuantidade" min="0" max="5" value="0" oninput="calc_total()">
                             </p>
                             <p>
                                 <label for="iPreco">Preço Total: R$</label>
