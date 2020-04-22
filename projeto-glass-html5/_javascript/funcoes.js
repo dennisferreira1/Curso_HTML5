@@ -15,6 +15,6 @@ function listaCidades(estado){
             options += '<option value= "' + cidadesPorEstados[estado][i] + '"/>';
         }
     }
-
+    document.getElementById('iCidade').value = "";
     document.getElementById("listCidades").innerHTML = options;
 }
