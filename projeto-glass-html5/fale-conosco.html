@@ -65,7 +65,7 @@
                             <p><label for="iLogradouro">Logradouro:</label><input type="text" name="nLogradouro" id="iLogradouro" size="25" maxlength="30" placeholder="Rua, Travessa, Avenida ..."></ p>
                             <p><label for="iNumero">Número:</label><input type="number" name="nNumero" id="iNumero" min="0" max="99999"></p>
                             <p><label for="iEstado">Estado:</label>
-                            <select name="nEstado" id="iEstado">
+                            <select name="nEstado" id="iEstado" onchange="listaCidades(this.value)">
                                 <optgroup label="Região Sudeste">
                                     <option value="RJ">Rio de Janeiro</option>
                                     <option value="SP">São Paulo</option>
@@ -83,14 +83,9 @@
                                 </optgroup>
 
                             </select></p>
-                            <p><label for="iCidade">Cidade:</label><input type="text" name="nCidade" id="iCidade" size="15" maxlength="20" placeholder="Sua cidade" list="listCidades"></p>
-                            <datalist id="listCidades">
-                                <option value="Natal"></option>
-                                <option value="Ceará-Mirim"></option>
-                                <option value="Parnamirim"></option>
-                                <option value="Macaíba"></option>
-                                <option value="São Gonçalo"></option>
-                            </datalist>
+                            <p><label for="iCidade">Cidade:</label><input type="text" name="nCidade" id="iCidade" size="15" maxlength="20" placeholder="Sua cidade" list="listCidades" onfocus="listaCidades(iEstado.value)"></p>
+
+                            <datalist id="listCidades"></datalist>
                             
                         </fieldset>
 

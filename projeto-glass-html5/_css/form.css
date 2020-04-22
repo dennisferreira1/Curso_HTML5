@@ -16,6 +16,10 @@ input:hover, textarea:hover {
     background-color: #dddddd;
 }
 
+select {
+    font-size: 13pt;
+}
+
 legend {
     color: #888888;
     font-weight: bold;
